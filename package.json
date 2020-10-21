@@ -1,0 +1,51 @@
+{
+  "name": "collo_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "babel-node ./api --out-dir build",
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec babel-node ./api/index.js",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
+    "postpretty": "yarn lint --fix"
+  },
+  "author": "maxwellgithinji",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^8.3.0",
+    "uuid-validate": "^0.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "@babel/runtime": "^7.11.2",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.1.3",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2"
+  }
+}
